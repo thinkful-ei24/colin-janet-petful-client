@@ -5,10 +5,11 @@ export default function Cats(props) {
   
   return(
     <section className='adoptCat'>
-      <img src={props.catImageUrl} alt = {props.catImageDesc}></img>
+     
     <header>
       <h2>Cats</h2>
-    <h3>Name: {props.catName}</h3>
+      <img src={props.catImageUrl} alt = {props.catImageDesc}></img>
+      <h3>Name: {props.catName}</h3>
     </header>
     <dl>
     <dd>sex: {props.catSex}</dd>
@@ -16,7 +17,7 @@ export default function Cats(props) {
     <dt>Breed: {props.catBreed}</dt>
     <dd>Story: {props.catStory}</dd>
     </dl>
-    <button type='button'>Adopt!</button>
+    <button type='button' onClick= {props.catsClick}>Adopt!</button>
     </section>
   )
 }
