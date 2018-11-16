@@ -5,7 +5,15 @@ import {
 } from '../actions/dogs.js';
 
 const initialState = {
-  currentDog:{},
+  currentDog:{
+    imageURL: null,
+    imageDescription: null,
+    name: null,
+    sex: null,
+    age: null,
+    breed: null,
+    story: null
+  },
   loading: false,
   error: null
 }
