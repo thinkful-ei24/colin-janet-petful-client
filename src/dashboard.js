@@ -2,8 +2,8 @@ import React from 'react';
 import Dogs from './dogs';
 import Cats from './cats';
 import {getCat} from './actions/cats';
-import {getDog} from './actions/dogs.js';
 import {deleteCat} from './actions/cats';
+import {getDog, deleteDog} from './actions/dogs.js';
 import {connect} from 'react-redux';
 
 export class Dashboard extends React.Component{
@@ -26,6 +26,7 @@ render(){
       dogImageDesc={this.props.dogimageDesc}
       dogSex={this.props.dogSex}
       dogStory= {this.props.dogStory}
+      adoptDog={() => this.props.dispatch(deleteDog())}
     />
     <Cats
       catName={this.props.catName}
