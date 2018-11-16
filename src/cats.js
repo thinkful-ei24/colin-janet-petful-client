@@ -5,7 +5,7 @@ export default function Cats(props) {
   
   return(
     <section className='adoptCat'>
-      <img src={props.catImageUrl}></img>
+      <img src={props.catImageUrl} alt = {props.catImageDesc}></img>
     <header>
       <h2>Cats</h2>
     <h3>Name: {props.catName}</h3>

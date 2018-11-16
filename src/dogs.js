@@ -4,7 +4,7 @@ export default function Dogs(props) {
 
     return(
       <section className='adoptDog'>
-        <header>
+        {/* <header>
           <h2>Dogs</h2>
           <img src={props.dogimageUrl} alt={props.dogimageDesc}></img>
           <h3>Name: {props.dogName}</h3>
@@ -15,9 +15,10 @@ export default function Dogs(props) {
           <dt>Breed: {props.dogBreed}</dt>
           <dd>Story: {props.dogStory}</dd>
         </dl>
-        <button type='button'>Adopt!</button>
+        <button type='button'>Adopt!</button> */}
       </section>
     )
   }
+
 
 
