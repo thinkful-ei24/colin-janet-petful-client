@@ -2,20 +2,18 @@ import React from 'react';
 
 export default function Dogs(props) {
 
-  const dog = props.dog;
-
     return(
       <section className='adoptDog'>
         {/* <header>
           <h2>Dogs</h2>
-          <img src={dog.img} alt={dog.imageDescription}></img>
-          <h3>Name: {dog.name}</h3>
+          <img src={props.dogimageUrl} alt={props.dogimageDesc}></img>
+          <h3>Name: {props.dogName}</h3>
         </header>
         <dl>
-          <dd>sex: {dog.sex}</dd>
-          <dt>Age: {dog.age}</dt>
-          <dt>Breed: {dog.breed}</dt>
-          <dd>Story: {dog.story}</dd>
+          <dd>sex: {props.dogSex}</dd>
+          <dt>Age: {props.dogAge}</dt>
+          <dt>Breed: {props.dogBreed}</dt>
+          <dd>Story: {props.dogStory}</dd>
         </dl>
         <button type='button'>Adopt!</button> */}
       </section>
