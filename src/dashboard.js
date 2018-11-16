@@ -6,10 +6,12 @@ export default class Dashboard extends React.Component{
 
 render(){
   return(
-    <section className='adoptPet'>
+    <section className='petContainer'>
     <h1> Adopt an Pet today!</h1>
+    <section className='adoptPet'>
     <Dogs/>
     <Cats/>
+    </section>
     </section>
   );
 }

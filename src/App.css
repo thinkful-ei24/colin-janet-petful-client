@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -22,9 +24,22 @@
   color: #61dafb;
 }
 
+.adoptPet{
+  margin-top: 80px;
+display: flex;
+flex-direction: row;
+border: 1px solid black;
+width: 100vw;
+margin: 0 auto;
+
+
+}
+
+
+
 
 img{
-  width: 30%;
+  width: 50%;
 }
 
 @keyframes App-logo-spin {
