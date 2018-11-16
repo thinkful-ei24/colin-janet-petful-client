@@ -3,6 +3,7 @@ import Dogs from './dogs';
 import Cats from './cats';
 import {getCat} from './actions/cats';
 import {getDog} from './actions/dogs.js';
+import {deleteCat} from './actions/cats';
 import {connect} from 'react-redux';
 
 export class Dashboard extends React.Component{
@@ -34,6 +35,7 @@ render(){
       catImageDesc={this.props.catimageDesc}
       catSex={this.props.catSex}
       catStory= {this.props.catStory}
+      catsClick= {()=>this.props.dispatch(deleteCat())}
     />
   </section>
 </section>
@@ -56,8 +58,7 @@ const mapStateToProps = (state)=>{
         dogimageUrl: state.dog.currentDog.imageURL,
         dogimageDesc: state.dog.currentDog.imageDescription,
         dogSex: state.dog.currentDog.sex,
-        dogStory: state.dog.currentDog.story
-
+        dogStory: state.dog.currentDog.story,
       }
 };
 
