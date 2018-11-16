@@ -2,9 +2,7 @@ import React from 'react';
 
 export default class Dogs extends React.Component{
 
-
-
-  render(){
+render(){
 return(
   <section className='adoptDog'>
   <header>

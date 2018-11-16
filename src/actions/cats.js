@@ -1,4 +1,6 @@
-import axios from
+import axios from 'axios';
+import {SERVER} from '../config';
+
 
 export const FETCH_CAT_REQUEST = 'FETCH_CAT_REQUEST';
 export const fetchCatRequest = () => ({
@@ -6,7 +8,7 @@ export const fetchCatRequest = () => ({
 });
 
 
-export const FETCH_CAT_SUCCESS = 'FETCH_CAT_SUCCESS
+export const FETCH_CAT_SUCCESS = 'FETCH_CAT_SUCCESS'
 export const fetchCatSuccess = (cat) => ({
   type: FETCH_CAT_SUCCESS,
   cat: cat
@@ -19,18 +21,18 @@ export const fetchCatError = (error) => ({
 });
 
 export const getCat = () => (dispatch) => {
+
   dispatch(fetchCatRequest());
   axios.get(`${SERVER}/cats`)
-    .then(({cat}) => {
-      dispatch(fetchCatSuccess(cat))
+    .then(({data}) => {
+      console.log(data);
+      dispatch(fetchCatSuccess(data));
     })
     .catch(error => dispatch(fetchCatError(error)));
 }
 
-//TODO make delete endpoint
-//
 export const deleteCat = () => dispatch => {
-  dispatch(fetchCat());
+
   axios.delete(`${SERVER}/cats`)
     .then(response => {
       dispatch(getCat());
