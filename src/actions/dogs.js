@@ -5,7 +5,7 @@ export const fetchDogRequest = () => ({
   type: FETCH_DOG_REQUEST
 });
 
-export const FETCH_DOG_SUCCESS = 'FETCH_DOG_SUCCESS
+export const FETCH_DOG_SUCCESS = 'FETCH_DOG_SUCCESS';
 export const fetchDogSuccess = (dog) => ({
   type: FETCH_DOG_SUCCESS,
   dog: dog

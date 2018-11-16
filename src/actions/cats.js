@@ -28,7 +28,6 @@ export const getCat = () => (dispatch) => {
   dispatch(fetchCatRequest());
   axios.get(`${SERVER}/cats`)
     .then(({data}) => {
-      console.log(data);
       dispatch(fetchCatSuccess(data));
     })
     .catch(error => dispatch(fetchCatError(error)));

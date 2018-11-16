@@ -2,7 +2,15 @@ import {FETCH_CAT_REQUEST, FETCH_CAT_SUCCESS, FETCH_CAT_ERROR} from '../actions/
 
 
 const initialState = {
-  currentCat:{},
+  currentCat:{
+    name:null,
+    age:null,
+    breed:null,
+    imageDescription: null,
+    imageUrl: null,
+    sex: null,
+    story: null
+  },
   loading: false,
   error: null
 }

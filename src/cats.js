@@ -1,23 +1,24 @@
 import React from 'react';
 
-export default class Dogs extends React.Component{
 
-render(){
-return(
-  <section className='adoptCat'>
-    <img src='https://images.unsplash.com/photo-1526509429168-2e43f01f6b81?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjM5OTI2fQ&s=4089f8e80dcf641fa46315683f1aae1e'></img>
-  <header>
-    <h2>Cats</h2>
-  <h3>Name: {this.props.catName}</h3>
-  </header>
-  <dl>
-  <dd>sex: Place Holder</dd>
-  <dt>Age: Place Holder</dt>
-  <dt>Breed: Bengal</dt>
-  <dd>Story: Place Holder</dd>
-  </dl>
-  <button type='button'>Adopt!</button>
-  </section>
-)
-  }
+export default function Cats(props) {
+  
+  return(
+    <section className='adoptCat'>
+      <img src={props.catImageUrl}></img>
+    <header>
+      <h2>Cats</h2>
+    <h3>Name: {props.catName}</h3>
+    </header>
+    <dl>
+    <dd>sex: {props.catSex}</dd>
+    <dt>Age: {props.catAge}</dt>
+    <dt>Breed: {props.catBreed}</dt>
+    <dd>Story: {props.catStory}</dd>
+    </dl>
+    <button type='button'>Adopt!</button>
+    </section>
+  )
 }
+
+
