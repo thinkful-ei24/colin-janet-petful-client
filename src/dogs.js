@@ -15,7 +15,10 @@ export default function Dogs(props) {
           <dt>Breed: {props.dogBreed}</dt>
           <dd>Story: {props.dogStory}</dd>
         </dl>
-        <button type='button'>Adopt!</button>
+        <button
+          type='button'
+          onClick={props.adoptDog}
+        >Adopt!</button>
       </section>
     )
   }
