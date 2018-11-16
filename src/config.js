@@ -1,3 +1,3 @@
 module.exports={
-  SERVER: 'http://localhost:8080'
+  SERVER: process.env.SERVER ||'http://localhost:8080'
 }
