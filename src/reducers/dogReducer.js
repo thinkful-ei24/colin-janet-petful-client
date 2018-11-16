@@ -1,4 +1,8 @@
-
+import {
+  FETCH_DOG_ERROR,
+  FETCH_DOG_REQUEST,
+  FETCH_DOG_SUCCESS
+} from '../actions/dogs.js';
 
 const initialState = {
   currentDog:{},
