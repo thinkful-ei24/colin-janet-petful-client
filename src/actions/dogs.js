@@ -20,8 +20,8 @@ export const fetchDogError = (error) => ({
 export const getDog = () => (dispatch) => {
   dispatch(fetchDogRequest());
   axios.get(`${SERVER}/dogs`)
-    .then(({dog}) => {
-      dispatch(fetchDogSuccess(dog))
+    .then(({data}) => {
+      dispatch(fetchDogSuccess(data))
     })
     .catch(error => dispatch(fetchDogError(error)));
 }
