@@ -5,6 +5,7 @@ import {getCat} from './actions/cats';
 import {deleteCat} from './actions/cats';
 import {getDog, deleteDog} from './actions/dogs.js';
 import {connect} from 'react-redux';
+import NoAdoption from './noAdoption.js';
 
 export class Dashboard extends React.Component{
 componentDidMount(){
@@ -12,34 +13,40 @@ componentDidMount(){
   this.props.dispatch(getDog());
 }
 render(){
+  //const dogArea = this.props.dogName !== null ? <Dogs /> : <noAdoption />
+  //const catArea = this.props.catName !== null ? <Dogs /> : <noAdoption />
+
 
   console.log(this.props.cat);
   return(
     <section className='petContainer'>
       <h1> Adopt an Pet today!</h1>
       <section className='adoptPet'>
-    <Dogs
-      dogName={this.props.dogName}
-      dogAge={this.props.dogAge}
-      dogBreed={this.props.dogBreed}
-      dogimageUrl={this.props.dogimageUrl}
-      dogImageDesc={this.props.dogimageDesc}
-      dogSex={this.props.dogSex}
-      dogStory= {this.props.dogStory}
-      adoptDog={() => this.props.dispatch(deleteDog())}
-    />
-    <Cats
-      catName={this.props.catName}
-      catAge={this.props.catAge}
-      catBreed={this.props.catBreed}
-      catImageUrl={this.props.catimageUrl}
-      catImageDesc={this.props.catimageDesc}
-      catSex={this.props.catSex}
-      catStory= {this.props.catStory}
-      catsClick= {()=>this.props.dispatch(deleteCat())}
-    />
-  </section>
-</section>
+        {!this.props && <NoAdoption />}
+        {/*!this.props.dogName && <NoAdoption />}*/}
+
+        {this.props.dogName && <Dogs
+          dogName={this.props.dogName}
+          dogAge={this.props.dogAge}
+          dogBreed={this.props.dogBreed}
+          dogimageUrl={this.props.dogimageUrl}
+          dogImageDesc={this.props.dogimageDesc}
+          dogSex={this.props.dogSex}
+          dogStory= {this.props.dogStory}
+          adoptDog={() => this.props.dispatch(deleteDog())}
+        />}
+        {this.props.catName && <Cats
+          catName={this.props.catName}
+          catAge={this.props.catAge}
+          catBreed={this.props.catBreed}
+          catImageUrl={this.props.catimageUrl}
+          catImageDesc={this.props.catimageDesc}
+          catSex={this.props.catSex}
+          catStory= {this.props.catStory}
+          catsClick= {()=>this.props.dispatch(deleteCat())}
+        />}
+      </section>
+    </section>
   );
 }
 }
