@@ -30,7 +30,7 @@ render(){
       catName={this.props.catName}
       catAge={this.props.catAge}
       catBreed={this.props.catBreed}
-      catImageUrl={this.props.imageUrl}
+      catImageUrl={this.props.catimageUrl}
       catImageDesc={this.props.catimageDesc}
       catSex={this.props.catSex}
       catStory= {this.props.catStory}
