@@ -16,7 +16,7 @@ return(
   <dt>Breed: Bengal</dt>
   <dd>Story: Place Holder</dd>
   </dl>
-
+  <button type='button'>Adopt!</button>
   </section>
 )
   }

@@ -18,7 +18,7 @@ return(
   <dt>Breed: French Bull Dog</dt>
   <dd>Story: Place Holder</dd>
   </dl>
-
+  <button type='button'>Adopt!</button>
   </section>
 )
   }
