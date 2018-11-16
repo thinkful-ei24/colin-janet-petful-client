@@ -3,10 +3,10 @@ import React from 'react';
 export default function Dogs(props) {
 
   const dog = props.dog;
-  render(){
+
     return(
       <section className='adoptDog'>
-        <header>
+        {/* <header>
           <h2>Dogs</h2>
           <img src={dog.img} alt={dog.imageDescription}></img>
           <h3>Name: {dog.name}</h3>
@@ -17,10 +17,10 @@ export default function Dogs(props) {
           <dt>Breed: {dog.breed}</dt>
           <dd>Story: {dog.story}</dd>
         </dl>
-        <button type='button'>Adopt!</button>
+        <button type='button'>Adopt!</button> */}
       </section>
     )
   }
-  }
+
 
 
