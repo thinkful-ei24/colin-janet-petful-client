@@ -1,3 +1,4 @@
+import {FETCH_CAT_REQUEST, FETCH_CAT_SUCCESS, FETCH_CAT_ERROR} from '../actions/cats';
 
 
 const initialState = {
