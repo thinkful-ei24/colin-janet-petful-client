@@ -21,7 +21,7 @@ render(){
     catName={this.props.catName}
     catAge={this.props.catAge}
     catBreed={this.props.catBreed}
-    catImageUrl={this.props.imageUrl}
+    catImageUrl={this.props.catimageUrl}
     catImageDesc={this.props.catimageDesc}
     catSex={this.props.catSex}
     catStory= {this.props.catStory}
@@ -37,7 +37,7 @@ const mapStateToProps = (state)=>{
         catName: state.cat.currentCat.name,
         catAge: state.cat.currentCat.age,
         catBreed: state.cat.currentCat.breed,
-        catimageUrl: state.cat.currentCat.imageUrl,
+        catimageUrl: state.cat.currentCat.imageURL,
         catimageDesc: state.cat.currentCat.imageDescription,
         catSex: state.cat.currentCat.sex,
         catStory: state.cat.currentCat.story
