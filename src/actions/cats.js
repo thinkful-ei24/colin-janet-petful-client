@@ -2,10 +2,13 @@ import axios from 'axios';
 import {SERVER} from '../config';
 
 
+
+
 export const FETCH_CAT_REQUEST = 'FETCH_CAT_REQUEST';
 export const fetchCatRequest = () => ({
   type: FETCH_CAT_REQUEST
 });
+
 
 
 export const FETCH_CAT_SUCCESS = 'FETCH_CAT_SUCCESS'
@@ -32,7 +35,6 @@ export const getCat = () => (dispatch) => {
 }
 
 export const deleteCat = () => dispatch => {
-
   axios.delete(`${SERVER}/cats`)
     .then(response => {
       dispatch(getCat());
