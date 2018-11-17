@@ -4,6 +4,7 @@
   height: 100vh;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Ribeye+Marrow');
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -28,18 +29,25 @@
   margin-top: 80px;
 display: flex;
 flex-direction: row;
-border: 1px solid black;
-width: 100vw;
+border: 2px double black;
+width: 90vw;
 margin: 0 auto;
+}
 
+h1{
+  font-family: 'Ribeye Marrow', cursive;
+  font-size: 50px;
+  color: black;
+}
 
+.noAdoption{
+  margin: 20px;
+  width: 50vw;
 }
 
 
-
-
 img{
-  width: 50%;
+  width: 60%;
 }
 
 @keyframes App-logo-spin {

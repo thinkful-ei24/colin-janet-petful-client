@@ -20,7 +20,7 @@ render(){
   console.log(this.props.cat);
   return(
     <section className='petContainer'>
-      <h1> Adopt an Pet today!</h1>
+      <h1> Adopt a Pet today!</h1>
       <section className='adoptPet'>
        
         {!this.props.dogName && <NoAdoption animalType='Dogs' />}
