@@ -22,8 +22,8 @@ render(){
     <section className='petContainer'>
       <h1> Adopt an Pet today!</h1>
       <section className='adoptPet'>
-        {!this.props && <NoAdoption />}
-        {/*!this.props.dogName && <NoAdoption />}*/}
+       
+        {!this.props.dogName && <NoAdoption animalType='Dogs' />}
 
         {this.props.dogName && <Dogs
           dogName={this.props.dogName}
@@ -35,6 +35,8 @@ render(){
           dogStory= {this.props.dogStory}
           adoptDog={() => this.props.dispatch(deleteDog())}
         />}
+
+         {!this.props.catName && <NoAdoption animalType='Cats' />}
         {this.props.catName && <Cats
           catName={this.props.catName}
           catAge={this.props.catAge}
