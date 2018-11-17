@@ -5,7 +5,7 @@ A live version can be found here https://colin-janet-petful-client.herokuapp.com
 ## Creators
 Created with <3 by Janet and Colin
 
-##Tech Stack 
+## Tech Stack 
 ### Front-End
 - React
 - Redux
